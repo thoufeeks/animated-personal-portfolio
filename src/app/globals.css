@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(5deg, white, white, white, white);
+  height: 130vh;
+}
+.hero::before {
+  content: "";
+  height: 130vh;
+  width: 100vw;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, black 1px, transparent 1px 45px) 50% 50% / 45px 45px,
+    linear-gradient(black 1px, transparent 1px 45px) 50% 50% / 45px 45px;
+  -webkit-mask: linear-gradient(20deg, transparent, transparent 53%, white);
+  mask: linear-gradient(25deg, transparent, transparent 53%, white);
+}
+.gradient-cream {
+  background: linear-gradient(180deg, #fffdd1, #848370, black);
+}
+.gradient-blue {
+  background: linear-gradient(180deg, black, black);
+}
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+/*  */
