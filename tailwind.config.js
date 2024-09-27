@@ -6,6 +6,15 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
     extend: {
       colors: {
         background: "var(--background)",
@@ -15,6 +24,7 @@ module.exports = {
         whiteList: ["var(--whiteList)"],
         inter: ["var(--inter)"],
         SFProDisplay: ["var(--sf-pro-display)"],
+        jetBrainsMono: ["var(--jet-brains-mono)"],
       },
     },
   },

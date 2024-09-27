@@ -9,6 +9,11 @@ const whiteList = localFont({
   display: "swap",
   variable: "--whiteList",
 });
+const jetBrainsMono = localFont({
+  src: "./fonts/JetBrainsMono-Regular.ttf",
+  display: "swap",
+  variable: "--jet-brains-mono",
+});
 const SFProDisplay = localFont({
   src: "./fonts/SF-pro-display-regular.woff",
   display: "swap",
@@ -30,7 +35,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ReactLenis root>
         <body
-          className={`${inter.variable} ${SFProDisplay.className} ${whiteList.variable} ${SFProDisplay.variable}  antialiased`}
+          className={`${inter.variable} ${SFProDisplay.className} ${whiteList.variable} ${SFProDisplay.variable} ${jetBrainsMono.variable}  antialiased`}
         >
           {children}
         </body>
