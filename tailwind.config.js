@@ -12,7 +12,9 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        myfont: ["var(--white-list)"],
+        whiteList: ["var(--whiteList)"],
+        inter: ["var(--inter)"],
+        SFProDisplay: ["var(--sf-pro-display)"],
       },
     },
   },

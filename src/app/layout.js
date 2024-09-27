@@ -7,11 +7,17 @@ import { ReactLenis } from "@/helpers/lenisScroll";
 const whiteList = localFont({
   src: "./fonts/Whitelist.woff2",
   display: "swap",
-  variable: "--white-list",
+  variable: "--whiteList",
+});
+const SFProDisplay = localFont({
+  src: "./fonts/SF-pro-display-regular.woff",
+  display: "swap",
+  variable: "--sf-pro-display",
 });
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--inter",
 });
 
 export const metadata = {
@@ -23,7 +29,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ReactLenis root>
-        <body className={`${inter.className} ${whiteList.variable}  antialiased`}>{children}</body>
+        <body
+          className={`${inter.variable} ${SFProDisplay.className} ${whiteList.variable} ${SFProDisplay.variable}  antialiased`}
+        >
+          {children}
+        </body>
       </ReactLenis>
     </html>
   );
