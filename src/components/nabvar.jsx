@@ -149,7 +149,7 @@ const Navbar = () => {
                     <span className="bg-gray-700 border-2  border-dashed border-gray-600 p-0.5 size-7 font-inter grid place-content-center rounded-full group-hover:translate-x-2 transition-all duration-200">
                       <ArrowRight stroke="white" isNavbarOpen={isNavbarOpen} />
                     </span>
-                    {link.name}
+                    <span className="transition-all block duration-100 title">{link.name}</span>
                   </a>
                 </motion.li>
               ) : (
